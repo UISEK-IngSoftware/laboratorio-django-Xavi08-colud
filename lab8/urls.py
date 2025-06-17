@@ -21,7 +21,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('pokedex.urls', namespace='pokemon'))
+    path('', include('pokedex.urls', namespace='pokemon')),
+    path('acounts/', include('django.contrib.auth.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL,  document_root=settings.MEDIA_ROOT) 
