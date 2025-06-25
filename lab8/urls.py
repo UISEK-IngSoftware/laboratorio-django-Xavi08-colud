@@ -22,6 +22,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pokedex.urls', namespace='pokemon')),
+    path('api/', include('api.urls')),
     path('acounts/', include('django.contrib.auth.urls')),
 ]
 
